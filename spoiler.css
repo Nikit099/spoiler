@@ -1,0 +1,142 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #012b34;
+}
+.block {
+  border-bottom: 1px solid rgb(231, 231, 231);
+}
+.title {
+  cursor: pointer;
+  position: relative;
+
+  border-top: 1px solid rgb(231, 231, 231);
+}
+.title::before,
+.title::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #02818a;
+  position: absolute;
+  left: 98%;
+  top: 40px;
+
+  transition: 0.3s;
+}
+.title::before {
+  transform: rotate(90deg);
+}
+.title::after {
+  transform: rotate(0deg);
+}
+.text {
+  max-width: 942px;
+  color: #000402;
+  display: none;
+}
+.active {
+  color: #02818a;
+}
+.active::before,
+.active::after {
+  transition: 0.3s;
+}
+.active::before {
+  transform: rotate(45deg);
+}
+.active::after {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 1920px) {
+  .container {
+    padding: 100px 160px;
+  }
+  h1 {
+    font-size: 64px;
+    font-weight: 400;
+    margin: 0 0 80px 0;
+  }
+  .title {
+    padding: 30px 0 30px 0px;
+    font-size: 36px;
+    font-weight: 400;
+  }
+  .text {
+    padding: 0px 0 40px 0px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 80px 120px;
+  }
+  .title {
+    padding: 24px 0 24px 0px;
+    font-size: 27px;
+  }
+  .text {
+    font-size: 15px;
+    padding: 0px 0 30px 0px;
+  }
+  h1 {
+    font-size: 48px;
+    margin: 0 0 60px 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    padding: 70px 107px;
+  }
+  .title {
+    font-size: 24px;
+    padding: 20px 0 20px 0px;
+  }
+  .text {
+    font-size: 14px;
+    padding: 0px 0 24px 0px;
+  }
+  h1 {
+    font-size: 42px;
+    margin: 0 0 56px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 40px;
+  }
+  .title {
+    font-size: 27px;
+    padding: 24px 0 24px 0px;
+  }
+  .text {
+    font-size: 15px;
+    padding: 0px 0 24px 0px;
+  }
+  h1 {
+    font-size: 42px;
+    margin: 0 0 50px 0;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    padding: 50px 24px;
+  }
+  .title {
+    font-size: 24px;
+    padding: 20px 0 20px 0px;
+  }
+  .text {
+    font-size: 15px;
+    padding: 0px 0 20px 0px;
+  }
+  h1 {
+    font-size: 30px;
+    margin: 0 0 40px 0;
+  }
+}
